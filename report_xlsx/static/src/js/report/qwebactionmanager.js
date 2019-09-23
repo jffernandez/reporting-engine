@@ -29,8 +29,8 @@ ActionManager.include({
                 url: report_xlsx_url,
                 data: {data: JSON.stringify([
                     report_xlsx_url,
-                    cloned_action.report_type
-                ])},
+                    cloned_action.report_type]),
+                    context: JSON.stringify(cloned_action.context)},
                 error: crash_manager.rpc_error.bind(crash_manager),
                 success: function (){
                     if(cloned_action && options && !cloned_action.dialog){
